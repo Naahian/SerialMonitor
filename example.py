@@ -22,3 +22,4 @@ def handleEvents():
     # assuming the serialData is {"distance":161.896}
     distance = sm.jsonData["distance"]
     print(f"distance is {distance}")
+    # time.sleep(1) #use if your arduino code has small delay

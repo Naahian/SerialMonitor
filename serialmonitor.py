@@ -10,7 +10,7 @@ class SerialMonitor:
         self.isStreaming = False
         self.serialData = ""
         self.jsonData = {}
-        self.buffer = serial.Serial(self.port, self.baudrate)
+        self._buffer = serial.Serial(self.port, self.baudrate)
 
     def checkPorts(self):
         ports = serial.tools.list_ports.comports()
@@ -23,7 +23,7 @@ class SerialMonitor:
         def inner(*args, **kwargs):
             while self.isStreaming:
                 temp = {}
-                self.serialData = self.buffer.readline().decode().strip()
+                self.serialData = self._buffer.readline().decode().strip()
                 try:
                     temp = json.loads(self.serialData)
                 except:
@@ -32,5 +32,5 @@ class SerialMonitor:
 
                 self.jsonData.update(temp)
                 func(*args, **kwargs)
-                self.buffer.flushInput()
+                self._buffer.flushInput()
         inner()
