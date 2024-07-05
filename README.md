@@ -1,4 +1,4 @@
-##pyserial made easy<br/>
+## pyserial made easy<br/>
 [under dev.] just use a decorator to manage realtime serialData from serial port.<br/>
 available features:<br/>
 `sm.checkPorts()` prints available ports<br/>
