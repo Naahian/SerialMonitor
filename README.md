@@ -1,12 +1,13 @@
-## pyserial made easy (under dev.)<br/>
-just use a decorator to manage realtime serialData from serial port.<br/>
-available features:<br/>
-`sm.checkPorts()` prints available ports<br/>
-`sm.baudrate` returns selected baudrate<br/>
-`sm.port` returns selected ports<br/>
-`sm.isStreaming` returns true if reading serial<br/>
-`sm.jsonData` returns converted to dict()<br/>
-`sm.serialData` returns serial data<br/>
+# Py_Serial_Montior
+(under development)<br>
+It's a pyserial made easy. Just use a decorator to manage realtime serialData from serial port.<br/>
+### Features
+- `.checkPorts()` prints available ports
+- `.baudrate` returns selected baudrate
+- `.port` returns selected ports
+- `.isStreaming` returns true if reading serial
+- `.jsonData` returns converted to dict()
+- `.serialData` returns serial data
 <br/>
 (only tested in windows)
 ```python
