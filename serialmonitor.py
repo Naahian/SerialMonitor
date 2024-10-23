@@ -1,11 +1,8 @@
 import json
-import time
 import serial
 import serial.tools.list_ports
 
-#Future Update:
-#   read/write data to bluetooth comm
-#   read/write data to RF comm
+#TODO: write Data to serial
 
 class SerialMonitor(serial.Serial):
     def __init__(self, baudrate:int, port:str):
